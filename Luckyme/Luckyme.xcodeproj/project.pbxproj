@@ -15,6 +15,8 @@
 		E787D7E12C0B5AC70005D34A /* worryBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7E02C0B5AC70005D34A /* worryBefore.swift */; };
 		E787D7E32C0B5AD10005D34A /* worryAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7E22C0B5AD10005D34A /* worryAfter.swift */; };
 		E787D7E52C0B5AE90005D34A /* custom_mind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7E42C0B5AE90005D34A /* custom_mind.swift */; };
+		E787D7E72C0B64EB0005D34A /* ButtonSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7E62C0B64EB0005D34A /* ButtonSystem.swift */; };
+		E787D7E92C0B6D0C0005D34A /* lucky_card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7E82C0B6D0C0005D34A /* lucky_card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		E787D7E02C0B5AC70005D34A /* worryBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = worryBefore.swift; sourceTree = "<group>"; };
 		E787D7E22C0B5AD10005D34A /* worryAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = worryAfter.swift; sourceTree = "<group>"; };
 		E787D7E42C0B5AE90005D34A /* custom_mind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom_mind.swift; sourceTree = "<group>"; };
+		E787D7E62C0B64EB0005D34A /* ButtonSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSystem.swift; sourceTree = "<group>"; };
+		E787D7E82C0B6D0C0005D34A /* lucky_card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lucky_card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				E787D7D02C0B5A1B0005D34A /* LuckymeApp.swift */,
+				E787D7E62C0B64EB0005D34A /* ButtonSystem.swift */,
 				E787D7D22C0B5A1B0005D34A /* ContentView.swift */,
 				E787D7DE2C0B5ABD0005D34A /* Home.swift */,
 				E787D7E02C0B5AC70005D34A /* worryBefore.swift */,
 				E787D7E22C0B5AD10005D34A /* worryAfter.swift */,
 				E787D7E42C0B5AE90005D34A /* custom_mind.swift */,
+				E787D7E82C0B6D0C0005D34A /* lucky_card.swift */,
 				E787D7D42C0B5A1D0005D34A /* Assets.xcassets */,
 				E787D7D62C0B5A1D0005D34A /* Preview Content */,
 			);
@@ -149,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E787D7E72C0B64EB0005D34A /* ButtonSystem.swift in Sources */,
 				E787D7D32C0B5A1B0005D34A /* ContentView.swift in Sources */,
 				E787D7E32C0B5AD10005D34A /* worryAfter.swift in Sources */,
 				E787D7E52C0B5AE90005D34A /* custom_mind.swift in Sources */,
+				E787D7E92C0B6D0C0005D34A /* lucky_card.swift in Sources */,
 				E787D7DF2C0B5ABD0005D34A /* Home.swift in Sources */,
 				E787D7E12C0B5AC70005D34A /* worryBefore.swift in Sources */,
 				E787D7D12C0B5A1B0005D34A /* LuckymeApp.swift in Sources */,
