@@ -1,4 +1,4 @@
-//
+ //
 //  worryBefore.swift
 //  Luckyme
 //
@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct worryBefore: View {
+    @State private var negative: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack(spacing: -44){
+                Circle().fill(.black)
+                    .frame(width: 88, height: 88)
+                    .zIndex(1.0)
+                TextEditor(text: $negative)
+                    .padding()
+                    .padding(.top, 60)
+                    .border(Color.black, width: 2.5)
+                    .frame(width: 308, height: 399)
+            }
+            
+            NavigationLink(destination: worryAfter()){
+                WhiteBtn(text: "마인드 체인지")
+                    .padding(.top, 29)
+            }
+        }
+        .padding(.top, -80)
+        .navigationBarBackButtonHidden()
+        
+        
     }
 }
 

@@ -12,15 +12,15 @@ struct worryAfter: View {
     
     var body: some View {
         TabView{
-            
             TextComponent(think: thinks[0], result: "물이 딱 반 정도 남았네! 다 먹기엔 너무 많고 덜 먹기엔 너무 적고 그래서 딱 반만 있었으면 좋겠다고 생각했는데 완전 럭키비키잖아🍀")
-            TextComponent(think: thinks[1], result: "물이 딱 반 정도 남았네! 다 먹기엔 너무 많고 덜 먹기엔 너무 적고 그래서 딱 반만 있었으면 좋겠다고 생각했는데 완전 럭키비키잖아🍀")
-            TextComponent(think: thinks[2], result: "물이 딱 반 정도 남았네! 다 먹기엔 너무 많고 덜 먹기엔 너무 적고 그래서 딱 반만 있었으면 좋겠다고 생각했는데 완전 럭키비키잖아🍀")
-            TextComponent(think: thinks[3], result: "물이 딱 반 정도 남았네! 다 먹기엔 너무 많고 덜 먹기엔 너무 적고 그래서 딱 반만 있었으면 좋겠다고 생각했는데 완전 럭키비키잖아🍀")
+            TextComponent(think: thinks[1], result: "물이 딱 반 밖에 안남았지만 안마시면 어떤가")
+            TextComponent(think: thinks[2], result: "물이 딱 반 정도 남았네! 브라보")
+            TextComponent(think: thinks[3], result: "물이 딱 반 정도 남았네! 또 사와야지 뭐 어떡해")
         }
         .padding(.vertical, 100)
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        .navigationBarBackButtonHidden()
         
 
     }
