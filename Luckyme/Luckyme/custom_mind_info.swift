@@ -12,6 +12,7 @@ struct custom_mind_info: View {
     var desc: String
     var body: some View {
         NavigationStack{
+            Header()
             VStack(spacing: 20){
                 VStack(alignment: .leading, spacing: 20){
                     Text(think)
@@ -26,6 +27,7 @@ struct custom_mind_info: View {
                 NavigationLink(destination: custom_mind(mindName: .constant(""), mindDesc: .constant(""))){
                     WhiteBtn(text: "다른 사고 보기")
                 }
+                Spacer()
             }
         }
     }

@@ -21,6 +21,7 @@ struct custom_mind: View {
     
     var body: some View {
         NavigationStack{
+            Header()
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing:15){
                     HStack(spacing: 15){
@@ -38,11 +39,13 @@ struct custom_mind: View {
                     }
                 }
             }
-            .frame(width: 340, height: 386, alignment: .center)
+            .frame(width: 340, height: 400, alignment: .top)
+            .padding(.top, 59)
             NavigationLink(destination: make_custom_mind()){
                 YellowBtn(text: "나만의 마인드 만들기")
             }
             .padding(.top, 29)
+            Spacer()
         }.navigationBarBackButtonHidden()
         
         

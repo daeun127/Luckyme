@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct worryBefore: View {
-    @State private var negative: String = ""
+    @State var negative: String = ""
+    @State var lucky: [String] = [""]
     
     var body: some View {
         NavigationStack{
+            Header()
+                .padding(.vertical)
             VStack(spacing: -44){
                 Circle().fill(.black)
                     .frame(width: 88, height: 88)
@@ -23,10 +26,11 @@ struct worryBefore: View {
                     .frame(width: 308, height: 399)
             }
             
-            NavigationLink(destination: worryAfter(negative: .constant("잠"), lucky: ["string"])){
+            NavigationLink(destination: worryAfter(negative: $negative)){
                 WhiteBtn(text: "마인드 체인지")
                     .padding(.top, 29)
             }
+            Spacer()
         }
         .padding(.top, -80)
         .navigationBarBackButtonHidden()

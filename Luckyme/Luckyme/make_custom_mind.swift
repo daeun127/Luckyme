@@ -13,6 +13,7 @@ struct make_custom_mind: View {
     
     var body: some View {
         NavigationStack{
+            Header()
             VStack(alignment: .leading, spacing: 44){
                 VStack(alignment: .leading, spacing: 8){
                     Text("마인드 이름")

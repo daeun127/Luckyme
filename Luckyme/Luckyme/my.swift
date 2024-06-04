@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct my: View {
+    /// 백 버튼 커스텀
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
