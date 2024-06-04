@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct lucky_card: View {
+    @Binding var lucky: [String]
+    
+    func stringDate()-> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        let dateString = dateFormatter.string(from: Date())
+        
+        return dateString
+    }
+    
     var body: some View {
         NavigationStack{
             
@@ -18,12 +28,13 @@ struct lucky_card: View {
             }
             .padding(.horizontal, 24)
             
-            
             ScrollView(.vertical, showsIndicators: false){
-                LuckyComponent(text: "뇌도 같이 낮잠 잔건데. 저녁에 집중력 높아지면 완전 럭키비키잖아. 완전 럭키비키잖아", category: "공부", date: "24.05.31")
-                    
-                LuckyComponent(text: "뇌도 같이 낮잠 잔건데. 저녁에 집중력 높아지면 완전 럭키비키잖아", category: "공부", date: "24.05.31")
-                LuckyComponent(text: "뇌도 같이 낮잠 잔건데. 저녁에 집중력 높아지면 완전 럭키비키잖아", category: "공부", date: "24.05.31")
+                if lucky[0] != ""{
+                    let str_Date = stringDate()
+                    ForEach(1..<lucky.count){ i in
+                        LuckyComponent(text: lucky[i], category: lucky[0], date: str_Date)
+                    }
+                }
             }
             .padding(.horizontal, 24)
         }
@@ -32,7 +43,7 @@ struct lucky_card: View {
 }
 
 #Preview {
-    lucky_card()
+    lucky_card(lucky: .constant(["잠", "지금 딱 낮잠자서 나머지 시간을 활용할 수 있으니 다행이지 뭐야😆\n완전 럭키비키잖아🍀", "오케이! 낮잠 잔 덕분에 이제 안졸린다. 할 일을 하자.  Bravo!"]))
 }
 
 struct LuckyComponent: View {

@@ -23,7 +23,7 @@ struct worryBefore: View {
                     .frame(width: 308, height: 399)
             }
             
-            NavigationLink(destination: worryAfter()){
+            NavigationLink(destination: worryAfter(negative: .constant("잠"), lucky: ["string"])){
                 WhiteBtn(text: "마인드 체인지")
                     .padding(.top, 29)
             }

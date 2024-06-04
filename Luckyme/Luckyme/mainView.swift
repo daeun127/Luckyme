@@ -12,36 +12,33 @@ struct mainView: View {
     @Binding var desc: String
     
     var body: some View {
-        NavigationStack{
-            Header()
-            TabView{
-                Home()
-                    .tabItem{
-                        Image(systemName: "star")
-                        Text("홈")
-                            .font(.system(size: 12.5, weight: .regular))
-                    }
-                worryBefore()
-                    .tabItem{
-                        Image(systemName: "star")
-                        Text("마인드 체인지")
-                            .font(.system(size: 12.5, weight: .regular))
-                    }
-                custom_mind(mindName: $mind, mindDesc: $desc)
-                    .tabItem{
-                        Image(systemName: "star")
-                        Text("커스텀 마인드")
-                            .font(.system(size: 12.5, weight: .regular))
-                    }
-                lucky_card()
-                    .tabItem{
-                        Image(systemName: "star")
-                        Text("행운 부적")
-                            .font(.system(size: 12.5, weight: .regular))
-                    }
-            }
+        Header()
+        TabView{
+            Home()
+                .tabItem{
+                    Image(systemName: "star")
+                    Text("홈")
+                        .font(.system(size: 12.5, weight: .regular))
+                }
+            worryBefore()
+                .tabItem{
+                    Image(systemName: "star")
+                    Text("마인드 체인지")
+                        .font(.system(size: 12.5, weight: .regular))
+                }
+            custom_mind(mindName: $mind, mindDesc: $desc)
+                .tabItem{
+                    Image(systemName: "star")
+                    Text("커스텀 마인드")
+                        .font(.system(size: 12.5, weight: .regular))
+                }
+            lucky_card(lucky: .constant(["", ""]))
+                .tabItem{
+                    Image(systemName: "star")
+                    Text("행운 부적")
+                        .font(.system(size: 12.5, weight: .regular))
+                }
         }
-            
         
     }
 }
@@ -52,6 +49,7 @@ struct Header: View {
             Text("Luckyme")
             Spacer()
             myPageIcon()
+            
         }
         .padding(.horizontal, 24)
         .frame(width: 393, height: 80, alignment: .center)
