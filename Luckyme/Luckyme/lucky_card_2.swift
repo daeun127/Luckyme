@@ -8,25 +8,41 @@
 import SwiftUI
 
 struct lucky_card_2: View {
+    var text: String
     var body: some View {
-        card()
-            .frame(width: 300, height: 300)
-        Button{
-            let image = convertToUIImage(view: card())
-            shareImage(image: image)
-        }label:{
-            Image(systemName: "heart.fill")
+        NavigationStack{
+            Header()
+            Spacer()
+            card(text: text)
+                .frame(width: 310, height: 465)
+                .border(Color.black, width: 2.5)
+            HStack{
+                Spacer()
+                Button{
+                    let image = convertToUIImage(view: card(text: text))
+                    shareImage(image: image)
+                }label:{
+                    Image("btn_share")
+                }
+            }
+            .padding(.trailing, 44)
+            .padding(.top, 10)
+            Spacer()
         }
+        
+        
     }
     
 }
 
 struct card: View {
+    var text: String
     var body: some View {
         ZStack{
             Image(systemName: "heart.fill")
             
-            Text("qwertasdfgjdkldf")
+            Text(text)
+                .font(.title)
         }.navigationBarBackButtonHidden()
     }
 }
@@ -59,5 +75,5 @@ func shareImage(image: UIImage) {
 }
 
 #Preview {
-    lucky_card_2()
+    lucky_card_2(text: "완전 럭키비키잖아🍀")
 }

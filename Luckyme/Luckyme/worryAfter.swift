@@ -76,10 +76,10 @@ struct worryAfter: View {
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
             .navigationBarBackButtonHidden()
-            NavigationLink(destination: lucky_card()){
-                YellowBtn(text: "행운 부적으로 이동하기")
-            }
-            .padding(.bottom, 80)
+                NavigationLink(destination: lucky_card()){
+                    YellowBtn(text: "행운 부적으로 이동하기")
+                }
+                .padding(.bottom, 80)
             Spacer()
         }
     }
@@ -90,7 +90,6 @@ struct worryAfter: View {
 }
 
 struct TextComponent: View {
-    
     @State var isOn : Bool = false
     @State var think: String
     @State var result: String
@@ -122,16 +121,16 @@ struct TextComponent: View {
                             let _ = print(lucky)
                         } label:{
                             if isOn {
-                                Image(systemName: "heart.fill")
+                                Image("heart_fill")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 44, height: 39)
                                     .foregroundStyle(.black)
                             } else {
-                                Image(systemName: "heart.fill")
+                                Image("heart_de")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 28, height: 28)
+                                    .frame(width: 44, height: 39)
                             }}}
                     .padding(.bottom, 28)
                     .padding(.horizontal, 22)

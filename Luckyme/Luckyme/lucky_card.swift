@@ -52,7 +52,7 @@ struct LuckyComponent: View {
     var date: String
     
     var body: some View {
-        NavigationLink(destination: lucky_card_2()){
+        NavigationLink(destination: lucky_card_2(text: text)){
             ZStack{
                 VStack(alignment: .center, spacing: 11){
                     Text(text)
