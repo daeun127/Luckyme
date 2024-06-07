@@ -76,6 +76,8 @@ struct myPageIcon: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 44, height: 44, alignment: .center)
+                .background(Color.white)
+                .clipShape(Circle())
             
         }
         .foregroundStyle(.black)

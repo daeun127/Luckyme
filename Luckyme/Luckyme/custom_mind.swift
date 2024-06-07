@@ -21,32 +21,40 @@ struct custom_mind: View {
     
     var body: some View {
         NavigationStack{
-            Header()
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing:15){
-                    HStack(spacing: 15){
-                        thinkView(think: think1.0, desc: think1.1)
-                        thinkView(think: think2.0, desc: think2.1)
+            ZStack{
+                Color.mainPurple
+                    .ignoresSafeArea()
+                VStack{
+                    Header()
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack(spacing:15){
+                            HStack(spacing: 15){
+                                thinkView(think: think1.0, desc: think1.1)
+                                thinkView(think: think2.0, desc: think2.1)
+                            }
+                            HStack(spacing: 15){
+                                thinkView(think: think3.0, desc: think3.1)
+                                thinkView(think: think4.0, desc: think4.1)
+                            }
+                            if !mindName.isEmpty {
+                                let _ = thinks.append(mindName)
+                                let _ = descs.append(mindDesc)
+                                thinkView(think: mindName, desc: "")
+                            }
+                        }
                     }
-                    HStack(spacing: 15){
-                        thinkView(think: think3.0, desc: think3.1)
-                        thinkView(think: think4.0, desc: think4.1)
+                    .frame(width: 340, height: 400, alignment: .top)
+                    .padding(.top, 59)
+                    NavigationLink(destination: make_custom_mind()){
+                        YellowBtn(text: "나만의 마인드 만들기")
                     }
-                    if !mindName.isEmpty {
-                        let _ = thinks.append(mindName)
-                        let _ = descs.append(mindDesc)
-                        thinkView(think: mindName, desc: "")
-                    }
+                    Spacer()
                 }
             }
-            .frame(width: 340, height: 400, alignment: .top)
-            .padding(.top, 59)
-            NavigationLink(destination: make_custom_mind()){
-                YellowBtn(text: "나만의 마인드 만들기")
-            }
-            .padding(.top, 29)
-            Spacer()
-        }.navigationBarBackButtonHidden()
+            
+            
+        }
+        .navigationBarBackButtonHidden()
         
         
     }
@@ -70,9 +78,10 @@ struct thinkView: View {
                 }
                 Rectangle()
                     .stroke(.black, style: StrokeStyle(lineWidth: 2.5))
-                    .foregroundStyle(.white)
+                    
             }
             .frame(width: 148, height: 185)
+            .background(Color.white)
         }
         .foregroundStyle(.black)
     }

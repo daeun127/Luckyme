@@ -12,32 +12,39 @@ struct worryBefore: View {
     @State var lucky: [String] = [""]
     
     var body: some View {
-        NavigationStack{
-            Header()
-                .padding(.vertical)
-            VStack(spacing: -44){
-                Circle().fill(.black)
-                    .frame(width: 88, height: 88)
-                    .zIndex(1.0)
-                TextEditor(text: $negative)
-                    .padding()
-                    .padding(.top, 60)
-                    .border(Color.black, width: 2.5)
-                    .frame(width: 308, height: 399)
+        NavigationStack {
+            ZStack {
+                Color.subGray
+                    .ignoresSafeArea()
+                VStack{
+                    Spacer()
+                    Header()
+                        .padding(.vertical)
+                    VStack(spacing: -44){
+                        Circle().fill(.black)
+                            .frame(width: 88, height: 88)
+                            .zIndex(1.0)
+                        TextEditor(text: $negative)
+                            .padding()
+                            .padding(.top, 60)
+                            .border(Color.black, width: 2.5)
+                            .frame(width: 308, height: 399)
+                            .background(Color.white)
+                    }
+                    
+                    NavigationLink(destination: worryAfter(negative: $negative)){
+                        WhiteBtn(text: "마인드 체인지")
+                            .padding(.top, 29)
+                    }
+                    Spacer()
+                }
+                .padding(.top, -80)
+                .navigationBarBackButtonHidden()
             }
-            
-            NavigationLink(destination: worryAfter(negative: $negative)){
-                WhiteBtn(text: "마인드 체인지")
-                    .padding(.top, 29)
-            }
-            Spacer()
         }
-        .padding(.top, -80)
-        .navigationBarBackButtonHidden()
-        
-        
     }
 }
+
 
 #Preview {
     worryBefore()

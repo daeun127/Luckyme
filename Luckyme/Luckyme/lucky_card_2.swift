@@ -11,26 +11,32 @@ struct lucky_card_2: View {
     var text: String
     var body: some View {
         NavigationStack{
-            Header()
-            Spacer()
-            card(text: text)
-                .frame(width: 310, height: 465)
-                .border(Color.black, width: 2.5)
-            HStack{
-                Spacer()
-                Button{
-                    let image = convertToUIImage(view: card(text: text))
-                    shareImage(image: image)
-                }label:{
-                    Image("btn_share")
+            ZStack{
+                Color.pointYellow
+                    .ignoresSafeArea()
+                VStack{
+                    Header()
+                    Spacer()
+                    card(text: text)
+                        .frame(width: 310, height: 465)
+                        .border(Color.black, width: 2.5)
+                        .background(Color.white)
+                    HStack{
+                        Spacer()
+                        Button{
+                            let image = convertToUIImage(view: card(text: text))
+                            shareImage(image: image)
+                        }label:{
+                            Image("btn_share")
+                        }
+                    }
+                    .padding(.trailing, 44)
+                    .padding(.top, 10)
+                    Spacer()
                 }
             }
-            .padding(.trailing, 44)
-            .padding(.top, 10)
-            Spacer()
-        }
-        
-        
+            
+            }
     }
     
 }
@@ -44,6 +50,7 @@ struct card: View {
             Text(text)
                 .font(.title)
         }.navigationBarBackButtonHidden()
+            
     }
 }
 

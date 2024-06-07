@@ -11,6 +11,13 @@ struct mainView: View {
     @Binding var mind: String
     @Binding var desc: String
     
+    init(mind: Binding<String>, desc: Binding<String>) {
+        self._mind = mind
+        self._desc = desc
+        UITabBar.appearance().backgroundColor = .white
+        UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
+    }
+    
     var body: some View {
         TabView{
             Home()
@@ -37,17 +44,17 @@ struct mainView: View {
                     Text("행운 부적")
                         .font(.system(size: 12.5, weight: .regular))
                 }
-            
         }
-        
-        
+        .tint(.mainPink)
+            
     }
 }
+
 
 struct Header: View {
     var body: some View {
         HStack(){
-            Text("Luckyme")
+            Image("Luckyme")
             Spacer()
             myPageIcon()
             
@@ -61,3 +68,7 @@ struct Header: View {
 #Preview {
     mainView(mind: .constant(""), desc: .constant(""))
 }
+
+
+
+

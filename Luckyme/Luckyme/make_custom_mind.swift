@@ -13,31 +13,38 @@ struct make_custom_mind: View {
     
     var body: some View {
         NavigationStack{
-            Header()
-            VStack(alignment: .leading, spacing: 44){
-                VStack(alignment: .leading, spacing: 8){
-                    Text("마인드 이름")
-                        .font(.system(size: 24, weight: .semibold))
-                    TextField("OO적 사고", text: $mindName)
-                        .padding()
-                        .border(Color.black, width: 2.5)
-                        .frame(width: 312, height: 51)
+            ZStack{
+                Color.subGray
+                    .ignoresSafeArea()
+                VStack{
+                    Header()
+                    VStack(alignment: .leading, spacing: 44){
+                        VStack(alignment: .leading, spacing: 8){
+                            Text("마인드 이름")
+                                .font(.system(size: 24, weight: .semibold))
+                            TextField("OO적 사고", text: $mindName)
+                                .padding()
+                                .border(Color.black, width: 2.5)
+                                .frame(width: 312, height: 51)
+                                .background(Color.white)
+                        }
+                        .padding(.top, 50)
+                        VStack(alignment: .leading, spacing: 8){
+                            Text("마인드 특징")
+                                .font(.system(size: 24, weight: .semibold))
+                            TextEditor(text: $mindDesc)
+                                .padding()
+                                .border(Color.black, width: 2.5)
+                                .frame(width: 312, height: 200)
+                                .background(Color.white)
+                        }
+                        NavigationLink(destination: custom_mind(mindName: $mindName, mindDesc: $mindDesc)){
+                            YellowBtn(text: "완료하기")
+                        }
+                        Spacer()
+                    }
                 }
-                VStack(alignment: .leading, spacing: 8){
-                    Text("마인드 특징")
-                        .font(.system(size: 24, weight: .semibold))
-                    TextEditor(text: $mindDesc)
-                        .padding()
-                        .border(Color.black, width: 2.5)
-                        .frame(width: 312, height: 200)
-                }
-                NavigationLink(destination: custom_mind(mindName: $mindName, mindDesc: $mindDesc)){
-                    WhiteBtn(text: "완료하기")
-                }
-                
             }
-            
-            
         }.navigationBarBackButtonHidden()
     }
 }
