@@ -27,7 +27,6 @@ struct worryAfter: View {
     func changeThink(negative: String) -> ([String]) {
         var positive: [String] = []
         
-        
         if negative.contains("물"){
             lucky[0] = "생활"
             positive.append(think1[0])
@@ -68,6 +67,7 @@ struct worryAfter: View {
                     .ignoresSafeArea()
                 VStack{
                     Header()
+                    Spacer()
                     let results = changeThink(negative: negative)
                     TabView{
                         TextComponent(think: thinks[0], result: results[0])
@@ -76,14 +76,13 @@ struct worryAfter: View {
                         TextComponent(think: thinks[3], result: results[3])
                     }
                     .frame(width: 391, height: 550)
-                    .padding(.top, -59)
+                    .padding(.top, -80)
                     .tabViewStyle(PageTabViewStyle())
                     .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                     .navigationBarBackButtonHidden()
                     NavigationLink(destination: lucky_card()){
                         YellowBtn(text: "행운 부적으로 이동하기")
                     }
-                    .padding(.bottom, 80)
                     Spacer()
                 }
             }
@@ -103,11 +102,18 @@ struct TextComponent: View {
     @State var result: String
     
     var body: some View {
+        let i = thinks.firstIndex(of: think)!
         ZStack{
             VStack(spacing: -44){
-                Circle().fill(.black)
+                Image(img[i])
+                    .resizable()
+                    .scaledToFit()
                     .frame(width: 88, height: 88)
                     .zIndex(1.0)
+                    .overlay{
+                        Circle().fill(Color.clear)
+                            .stroke(Color.black, lineWidth: 2.5)
+                    }
                 Rectangle().fill(.white)
                     .stroke(.black, style: StrokeStyle(lineWidth: 2.5))
                     .frame(width: 308, height: 399)

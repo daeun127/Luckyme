@@ -20,7 +20,7 @@ struct lucky_card_2: View {
                     card(text: text)
                         .frame(width: 310, height: 465)
                         .border(Color.black, width: 2.5)
-                        .background(Color.white)
+                        .background(Color.mainPurple)
                     HStack{
                         Spacer()
                         Button{
@@ -45,10 +45,32 @@ struct card: View {
     var text: String
     var body: some View {
         ZStack{
-            Image(systemName: "heart.fill")
+            VStack{
+                ZStack{
+                    Image(img.randomElement()!)
+                        .resizable()
+                        .scaledToFit()
+                        .zIndex(1)
+                        .frame(width: 63, height: 63, alignment: .center)
+                        .overlay{
+                            Circle().fill(Color.clear)
+                                .stroke(Color.white, lineWidth: 2.5)
+                        }
+                    Rectangle().fill(.white)
+                        .frame(width: 258, height: 2, alignment: .center)
+                }
+                .padding(.top, 16)
+                Spacer()
+                Text(text)
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .frame(width: 250, height: 100, alignment: .center)
+                Spacer()
+                Rectangle().fill(.white)
+                    .frame(width: 258, height: 2, alignment: .center)
+                    .padding(.bottom, 40)
+            }
             
-            Text(text)
-                .font(.title)
         }.navigationBarBackButtonHidden()
             
     }
@@ -82,5 +104,5 @@ func shareImage(image: UIImage) {
 }
 
 #Preview {
-    lucky_card_2(text: "완전 럭키비키잖아🍀")
+    lucky_card_2(text: "성적이 안나와도 더 노력하면 다음 번에 더 높은 성적을 받을 수 있으니 완전 럭키비키잖아🍀")
 }

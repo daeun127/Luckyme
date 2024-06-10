@@ -11,18 +11,12 @@ struct mainView: View {
     @Binding var mind: String
     @Binding var desc: String
     
-    init(mind: Binding<String>, desc: Binding<String>) {
-        self._mind = mind
-        self._desc = desc
-        UITabBar.appearance().backgroundColor = .white
-        UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
-    }
-    
     var body: some View {
         TabView{
             Home()
                 .tabItem{
-                    Image(systemName: "star")
+                    Image("home")
+                        
                     Text("홈")
                         .font(.system(size: 12.5, weight: .regular))
                 }

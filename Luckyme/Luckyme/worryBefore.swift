@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct worryBefore: View {
-    @State var negative: String = ""
+    @State var negative: String = "용돈"
     @State var lucky: [String] = [""]
     
     var body: some View {
@@ -21,9 +21,13 @@ struct worryBefore: View {
                     Header()
                         .padding(.vertical)
                     VStack(spacing: -44){
-                        Circle().fill(.black)
+                        Circle().fill(.subGray)
                             .frame(width: 88, height: 88)
                             .zIndex(1.0)
+                            .overlay{
+                                Circle().fill(Color.clear)
+                                    .stroke(Color.black, lineWidth: 2.5)
+                            }
                         TextEditor(text: $negative)
                             .padding()
                             .padding(.top, 60)
@@ -34,7 +38,7 @@ struct worryBefore: View {
                     
                     NavigationLink(destination: worryAfter(negative: $negative)){
                         WhiteBtn(text: "마인드 체인지")
-                            .padding(.top, 29)
+                            .padding(.top, 48)
                     }
                     Spacer()
                 }
