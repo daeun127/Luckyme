@@ -12,6 +12,11 @@ struct mainView: View {
     @Binding var desc: String
     @State private var selectedTab = 0  // 현재 선택된 탭을 추적하기 위한 상태 변수
     
+    init(mind: Binding<String>, desc: Binding<String>) {
+            self._mind = mind
+            self._desc = desc
+            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().scrollEdgeAppearance = .init()        }
     
     var body: some View {
             TabView(selection: $selectedTab) {

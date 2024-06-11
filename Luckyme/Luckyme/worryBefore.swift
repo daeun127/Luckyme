@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct worryBefore: View {
-    @State var negative: String = "용돈"
+    @State var negative: String = ""
     @State var lucky: [String] = [""]
     
     var body: some View {

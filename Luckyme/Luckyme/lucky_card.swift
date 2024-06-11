@@ -34,7 +34,7 @@ struct lucky_card: View {
                     ScrollView(.vertical, showsIndicators: false){
                         if lucky[0] != "" {
                             let str_Date = stringDate()
-                            ForEach(1..<lucky.count){ i in
+                            ForEach(1..<lucky.count, id: \.self){ i in
                                 LuckyComponent(text: lucky[i], category: lucky[0], date: str_Date)
                             }
                         }
