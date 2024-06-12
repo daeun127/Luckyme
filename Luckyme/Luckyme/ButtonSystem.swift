@@ -61,7 +61,7 @@ struct myView: View {
                         .font(.system(size: 16, weight: .medium))
                         .foregroundStyle(.black)
                     Spacer()
-                    Image(systemName: "chevron.")
+                    Image(systemName: "chevron.right")
                 }
                 .padding(.horizontal, 22)
                 
