@@ -12,8 +12,9 @@
 		E71146282C0C5B65009E256A /* make_custom_mind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71146272C0C5B65009E256A /* make_custom_mind.swift */; };
 		E711462A2C0C75E1009E256A /* my.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71146292C0C75E1009E256A /* my.swift */; };
 		E711462C2C0C8301009E256A /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E711462B2C0C8301009E256A /* mainView.swift */; };
+		E72668032C19266F005E06D0 /* Lexend-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E72668022C19266F005E06D0 /* Lexend-SemiBold.ttf */; };
 		E787D7D12C0B5A1B0005D34A /* LuckymeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7D02C0B5A1B0005D34A /* LuckymeApp.swift */; };
-		E787D7D32C0B5A1B0005D34A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7D22C0B5A1B0005D34A /* ContentView.swift */; };
+		E787D7D32C0B5A1B0005D34A /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7D22C0B5A1B0005D34A /* Splash.swift */; };
 		E787D7D52C0B5A1D0005D34A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787D7D42C0B5A1D0005D34A /* Assets.xcassets */; };
 		E787D7D82C0B5A1D0005D34A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E787D7D72C0B5A1D0005D34A /* Preview Assets.xcassets */; };
 		E787D7DF2C0B5ABD0005D34A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787D7DE2C0B5ABD0005D34A /* Home.swift */; };
@@ -30,9 +31,11 @@
 		E71146272C0C5B65009E256A /* make_custom_mind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = make_custom_mind.swift; sourceTree = "<group>"; };
 		E71146292C0C75E1009E256A /* my.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my.swift; sourceTree = "<group>"; };
 		E711462B2C0C8301009E256A /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
+		E72668012C1924FA005E06D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E72668022C19266F005E06D0 /* Lexend-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-SemiBold.ttf"; sourceTree = "<group>"; };
 		E787D7CD2C0B5A1B0005D34A /* Luckyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luckyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E787D7D02C0B5A1B0005D34A /* LuckymeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckymeApp.swift; sourceTree = "<group>"; };
-		E787D7D22C0B5A1B0005D34A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E787D7D22C0B5A1B0005D34A /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		E787D7D42C0B5A1D0005D34A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E787D7D72C0B5A1D0005D34A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E787D7DE2C0B5ABD0005D34A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -54,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E72667FE2C19249D005E06D0 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				E72668022C19266F005E06D0 /* Lexend-SemiBold.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		E787D7C42C0B5A1B0005D34A = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +84,10 @@
 		E787D7CF2C0B5A1B0005D34A /* Luckyme */ = {
 			isa = PBXGroup;
 			children = (
+				E72668012C1924FA005E06D0 /* Info.plist */,
 				E787D7D02C0B5A1B0005D34A /* LuckymeApp.swift */,
 				E787D7E62C0B64EB0005D34A /* ButtonSystem.swift */,
-				E787D7D22C0B5A1B0005D34A /* ContentView.swift */,
+				E787D7D22C0B5A1B0005D34A /* Splash.swift */,
 				E711462B2C0C8301009E256A /* mainView.swift */,
 				E787D7DE2C0B5ABD0005D34A /* Home.swift */,
 				E787D7E02C0B5AC70005D34A /* worryBefore.swift */,
@@ -87,6 +99,7 @@
 				E71146252C0C59FE009E256A /* lucky_card_2.swift */,
 				E71146292C0C75E1009E256A /* my.swift */,
 				E787D7D42C0B5A1D0005D34A /* Assets.xcassets */,
+				E72667FE2C19249D005E06D0 /* font */,
 				E787D7D62C0B5A1D0005D34A /* Preview Content */,
 			);
 			path = Luckyme;
@@ -159,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E787D7D82C0B5A1D0005D34A /* Preview Assets.xcassets in Resources */,
+				E72668032C19266F005E06D0 /* Lexend-SemiBold.ttf in Resources */,
 				E787D7D52C0B5A1D0005D34A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +189,7 @@
 				E711462C2C0C8301009E256A /* mainView.swift in Sources */,
 				E787D7E72C0B64EB0005D34A /* ButtonSystem.swift in Sources */,
 				E71146262C0C59FE009E256A /* lucky_card_2.swift in Sources */,
-				E787D7D32C0B5A1B0005D34A /* ContentView.swift in Sources */,
+				E787D7D32C0B5A1B0005D34A /* Splash.swift in Sources */,
 				E787D7E32C0B5AD10005D34A /* worryAfter.swift in Sources */,
 				E787D7E52C0B5AE90005D34A /* custom_mind.swift in Sources */,
 				E787D7E92C0B6D0C0005D34A /* lucky_card.swift in Sources */,
@@ -319,6 +333,8 @@
 				DEVELOPMENT_TEAM = NL8Y67QBFG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luckyme/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,6 +364,8 @@
 				DEVELOPMENT_TEAM = NL8Y67QBFG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luckyme/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

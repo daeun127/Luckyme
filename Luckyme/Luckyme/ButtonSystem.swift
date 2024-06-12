@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonSystem: View {
     var body: some View {
         YellowBtn(text: "나만의 마인드 만들기")
-        WhiteBtn(text: "마인드 체인지")
+        WhiteBtn(text: "마인드 체인지 하러가기")
         myView(text: "알림 설정")
         myPageIcon()
         

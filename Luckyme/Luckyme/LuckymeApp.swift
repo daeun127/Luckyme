@@ -11,8 +11,7 @@ import SwiftUI
 struct LuckymeApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            mainView(mind: .constant(""), desc: .constant(""))
+            Splash()
         }
     }
 }

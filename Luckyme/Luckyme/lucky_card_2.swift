@@ -20,7 +20,6 @@ struct lucky_card_2: View {
                     card(text: text)
                         .frame(width: 310, height: 465)
                         .border(Color.black, width: 2.5)
-                        .background(Color.mainPurple)
                     HStack{
                         Spacer()
                         Button{
@@ -42,6 +41,7 @@ struct lucky_card_2: View {
 }
 
 struct card: View {
+    var bg: [String] = ["bg1", "bg2", "bg3", "bg4"]
     var text: String
     var body: some View {
         ZStack{
@@ -59,19 +59,26 @@ struct card: View {
                     Rectangle().fill(.white)
                         .frame(width: 258, height: 2, alignment: .center)
                 }
-                .padding(.top, 16)
+                .padding(.top, 20)
                 Spacer()
                 Text(text)
                     .font(.system(size: 16, weight: .semibold))
+                    .lineSpacing(6)
                     .foregroundStyle(.white)
-                    .frame(width: 250, height: 100, alignment: .center)
+                    .padding(.top, -16)
+                    .frame(width: 200, height: 300, alignment: .center)
                 Spacer()
                 Rectangle().fill(.white)
                     .frame(width: 258, height: 2, alignment: .center)
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 60)
             }
-            
-        }.navigationBarBackButtonHidden()
+        }
+        .background{
+            Image(bg.randomElement()!)
+                .resizable()
+                .frame(width: 310, height: 465, alignment: .center)
+        }
+        .navigationBarBackButtonHidden()
             
     }
 }
@@ -80,7 +87,7 @@ func convertToUIImage(view: card) -> UIImage {
     let controller = UIHostingController(rootView: view)
     let view = controller.view
     
-    let targetSize = CGSize(width: 300, height: 300) // 원하는 크기
+    let targetSize = CGSize(width: 310, height: 465)
     view?.bounds = CGRect(origin: .zero, size: targetSize)
     view?.backgroundColor = .clear
     

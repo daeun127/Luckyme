@@ -13,6 +13,8 @@ struct Home: View {
             Header()
             Spacer()
             Text("Home")
+                .font(Font.custom("Lexend-SemiBold", size: 39.0))
+            WhiteBtn(text: "마인드 체인지 하러가기")
             Spacer()
         }
     }
