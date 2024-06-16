@@ -21,7 +21,8 @@ struct worryBefore: View {
                     Header()
                         .padding(.vertical)
                     VStack(spacing: -44){
-                        Circle().fill(.subGray)
+                        Image("before_img")
+                            .resizable()
                             .frame(width: 88, height: 88)
                             .zIndex(1.0)
                             .overlay{

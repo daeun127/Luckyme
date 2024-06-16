@@ -49,8 +49,13 @@ struct my: View {
                             }
                             .stroke(.black, style: StrokeStyle(lineWidth: 2.0))
                             .frame(width: 300, height: 1)
-                            Circle()
+                            Image("my_smile")
+                                .resizable()
                                 .frame(width: 36, height: 36)
+                                .overlay{
+                                    Circle().fill(Color.clear)
+                                        .stroke(Color.black, lineWidth: 2)
+                                }
                         }
                     }
                     
